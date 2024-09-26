@@ -1,0 +1,20 @@
+<div id="resultados" th:fragment="resultados">
+    <h2>Artistas</h2>
+    <ul>
+        <li th:each="artista : ${artista}" th:text="${artista.nomeArtistico}" class="playlist-item">Nome do Artista</li>
+    </ul>
+
+    <h2>Álbuns</h2>
+    <ul>
+        <li th:each="album : ${album}" th:text="${album.nome}" th:data-id="${album.id}" class="album-item" onclick="abrirAlbum()">Título do Álbum</li>
+    </ul>
+
+    <h2>Músicas</h2>
+    <ul>
+        <li th:each="musica : ${musica}" th:text="${musica.nome}" class="musica-item" th:data-url="@{/musica/{id}(id=${musica.id})}" th:data-id="${musica.id}">Título da Música</li>
+    </ul>
+</div>
+
+
+
+    

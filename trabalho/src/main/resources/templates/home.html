@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head th:replace="~{fragments/head :: head}"></head>
+
+<body>
+    <nav th:replace="~{fragments/nav :: menu}"></nav>
+    <div class="container" style="margin-top: 80px;">
+        <!-- Seção de Pesquisa -->
+        <div class="section">
+            <h2>Pesquisar</h2>
+            <div class="pesquisa">
+                <input type="text" placeholder="Buscar músicas, artistas, álbuns..." id="pesquisa">
+            </div>
+            <div th:replace="~{fragments/pesquisa :: resultados}"></div>
+        </div>
+
+        <div class="playlists section">
+            <h2>Minhas Playlists</h2>
+            <div id="playlists-container">
+            </div>
+        </div>
+        
+
+
+
+        <div class="section">
+            <h2>Reprodutor de Música</h2>
+            <div class="player">
+                <div class="track-info">
+                    <p><strong>Tocando agora:</strong> <span id="musica-nome">Nome da Música</span>
+                </div>
+                <audio id="audio-player" controls>
+                    <source id="musica-url" src="" type="audio/mpeg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+                <button onclick="adicionarPlaylist()" class="btnAdd">Adicionar na Playlist</button>
+                <br><br>
+                <form method="POST" th:action="@{/playlist/adicionarMusica}" class="playlist" id="adicionarMusicaForm">
+                    <input type="hidden" name="id_musica" value="" id="IdMusica">
+                    <div id="select-container" style="display: none;" class="select">
+
+                    </div>
+                    <button type="submit" style="display: none;" class="btnAddPlaylist">Adicionar na Playlist</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/musica.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</body>
+
+</html>

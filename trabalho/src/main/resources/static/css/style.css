@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    display: flex;
+    height: 100vh;
+}
+
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.section {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.section:nth-child(1) {
+    background-color: #282828;
+}
+
+.section:nth-child(2) {
+    background-color: #1e1e1e;
+    border-left: 2px solid #444;
+    border-right: 2px solid #444;
+}
+
+.section:nth-child(3) {
+    background-color: #282828;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+.playlists {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.playlist-item {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #444;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.playlist-item:hover {
+    background-color: #555;
+}
+
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.player .track-info {
+    margin-bottom: 20px;
+}
+
+.player .controls {
+    display: flex;
+    gap: 10px;
+}
+
+.controls button {
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #555;
+}
+
+.musica-item {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #444;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.musica-item:hover {
+    background-color: #555;
+}
+
+.album-item {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #444;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.album-item:hover {
+    background-color: #555;
+}
+ul{
+    list-style-type: none; /* Remove os marcadores */
+    padding-left: 0; /* Remove o espaçamento à esquerda */
+}
+li{
+    padding-top: 8px;
+}
+
+/* .btnAddPlaylist {
+    background-color: #b0b0b0; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.btnAddPlaylist:hover {
+    background-color: #a0a0a0; 
+    transform: scale(1.05); 
+}
+
+.btnAddPlaylist:active {
+    background-color: #909090; 
+    transform: scale(0.95); 
+} */

@@ -1,0 +1,5 @@
+<select name="id" th:fragment="select">
+    <option value="">Selecione a Playlist</option>
+    <option th:each="p : ${playlists}" th:value="${p.id}" th:text="${p.nome}">sla</option>
+
+</select>

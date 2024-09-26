@@ -1,0 +1,8 @@
+<div class="section" th:fragment="playlist">
+    <div class="playlists">
+        <ul>
+            <li th:each="playlist : ${playlists}" th:text="${playlist.nome}" class="playlist-item"
+                th:data-id="${playlist.id}" onclick="abrirPlaylist()">Nome da Playlist</li>
+        </ul>
+    </div>
+</div>
